@@ -1,0 +1,155 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e337b2c38823ca48a341524d60b9bf7, type: 3}
+  m_Name: SymbolList
+  m_EditorClassIdentifier: 
+  symbols:
+  - symbolIcon: {fileID: 1519978744, guid: 9d7d44922bd58aa4582a9ad2f2e27398, type: 3}
+    odds: 50
+    bigWin: 0
+    smallWin: 0
+    extraSpins: 0
+    extraSpinsAmount: 0
+    isJackpot: 0
+  - symbolIcon: {fileID: -775119842, guid: 9d7d44922bd58aa4582a9ad2f2e27398, type: 3}
+    odds: 75
+    bigWin: 0
+    smallWin: 0
+    extraSpins: 0
+    extraSpinsAmount: 0
+    isJackpot: 0
+  - symbolIcon: {fileID: 807646738, guid: 9d7d44922bd58aa4582a9ad2f2e27398, type: 3}
+    odds: 100
+    bigWin: 0
+    smallWin: 0
+    extraSpins: 0
+    extraSpinsAmount: 0
+    isJackpot: 0
+  - symbolIcon: {fileID: -249511026, guid: 9d7d44922bd58aa4582a9ad2f2e27398, type: 3}
+    odds: 150
+    bigWin: 0
+    smallWin: 0
+    extraSpins: 0
+    extraSpinsAmount: 0
+    isJackpot: 0
+  - symbolIcon: {fileID: -20339205, guid: 9d7d44922bd58aa4582a9ad2f2e27398, type: 3}
+    odds: 200
+    bigWin: 0
+    smallWin: 0
+    extraSpins: 0
+    extraSpinsAmount: 0
+    isJackpot: 0
+  - symbolIcon: {fileID: -544737903, guid: 9d7d44922bd58aa4582a9ad2f2e27398, type: 3}
+    odds: 300
+    bigWin: 0
+    smallWin: 0
+    extraSpins: 0
+    extraSpinsAmount: 0
+    isJackpot: 0
+  - symbolIcon: {fileID: -353189640, guid: 9d7d44922bd58aa4582a9ad2f2e27398, type: 3}
+    odds: 350
+    bigWin: 0
+    smallWin: 0
+    extraSpins: 0
+    extraSpinsAmount: 0
+    isJackpot: 0
+  - symbolIcon: {fileID: -602418156, guid: 9d7d44922bd58aa4582a9ad2f2e27398, type: 3}
+    odds: 400
+    bigWin: 0
+    smallWin: 0
+    extraSpins: 0
+    extraSpinsAmount: 0
+    isJackpot: 0
+  - symbolIcon: {fileID: -809534408, guid: 9d7d44922bd58aa4582a9ad2f2e27398, type: 3}
+    odds: 450
+    bigWin: 0
+    smallWin: 0
+    extraSpins: 0
+    extraSpinsAmount: 0
+    isJackpot: 0
+  - symbolIcon: {fileID: 892589055, guid: 9d7d44922bd58aa4582a9ad2f2e27398, type: 3}
+    odds: 500
+    bigWin: 0
+    smallWin: 0
+    extraSpins: 0
+    extraSpinsAmount: 0
+    isJackpot: 0
+  - symbolIcon: {fileID: -1780794358, guid: 9d7d44922bd58aa4582a9ad2f2e27398, type: 3}
+    odds: 600
+    bigWin: 0
+    smallWin: 0
+    extraSpins: 0
+    extraSpinsAmount: 0
+    isJackpot: 0
+  - symbolIcon: {fileID: 545302617, guid: 9d7d44922bd58aa4582a9ad2f2e27398, type: 3}
+    odds: 800
+    bigWin: 0
+    smallWin: 0
+    extraSpins: 0
+    extraSpinsAmount: 0
+    isJackpot: 0
+  - symbolIcon: {fileID: 695215019, guid: 9d7d44922bd58aa4582a9ad2f2e27398, type: 3}
+    odds: 900
+    bigWin: 0
+    smallWin: 0
+    extraSpins: 0
+    extraSpinsAmount: 0
+    isJackpot: 0
+  - symbolIcon: {fileID: 2140833922, guid: 9d7d44922bd58aa4582a9ad2f2e27398, type: 3}
+    odds: 1000
+    bigWin: 0
+    smallWin: 0
+    extraSpins: 0
+    extraSpinsAmount: 0
+    isJackpot: 0
+  - symbolIcon: {fileID: 950257097, guid: 9d7d44922bd58aa4582a9ad2f2e27398, type: 3}
+    odds: 1500
+    bigWin: 0
+    smallWin: 0
+    extraSpins: 0
+    extraSpinsAmount: 0
+    isJackpot: 0
+  - symbolIcon: {fileID: 181301436, guid: 9d7d44922bd58aa4582a9ad2f2e27398, type: 3}
+    odds: 2000
+    bigWin: 0
+    smallWin: 0
+    extraSpins: 0
+    extraSpinsAmount: 0
+    isJackpot: 0
+  - symbolIcon: {fileID: 1666303214, guid: 9d7d44922bd58aa4582a9ad2f2e27398, type: 3}
+    odds: 2500
+    bigWin: 0
+    smallWin: 0
+    extraSpins: 0
+    extraSpinsAmount: 0
+    isJackpot: 0
+  - symbolIcon: {fileID: 462554774, guid: 9d7d44922bd58aa4582a9ad2f2e27398, type: 3}
+    odds: 3000
+    bigWin: 0
+    smallWin: 0
+    extraSpins: 0
+    extraSpinsAmount: 0
+    isJackpot: 0
+  - symbolIcon: {fileID: -278201975, guid: 9d7d44922bd58aa4582a9ad2f2e27398, type: 3}
+    odds: 4000
+    bigWin: 0
+    smallWin: 0
+    extraSpins: 0
+    extraSpinsAmount: 0
+    isJackpot: 0
+  - symbolIcon: {fileID: 1277127353, guid: 9d7d44922bd58aa4582a9ad2f2e27398, type: 3}
+    odds: 8000
+    bigWin: 0
+    smallWin: 0
+    extraSpins: 0
+    extraSpinsAmount: 0
+    isJackpot: 1

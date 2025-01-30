@@ -10,4 +10,5 @@ public class Symbol
     public int smallWin;
     public bool extraSpins;
     public int extraSpinsAmount;
+    public bool isJackpot;
 }
