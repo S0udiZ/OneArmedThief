@@ -92,8 +92,7 @@ public class Gamling : MonoBehaviour
         }
 
         // venter 3 sekunder
-        yield return new WaitForSeconds(3);
-
+        yield return new WaitForSeconds(2);
         // Roller maskinen først med BigPot, hvis den ikke rammer noget så roller den smallPot, hvis den ikke rammer noget så roller den random
         // Derefter sætter den de 3 symboler i maskinen og viser dem og beløbet man har vundet
         if (BigPot())
