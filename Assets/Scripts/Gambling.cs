@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Gamling : MonoBehaviour
@@ -9,8 +10,8 @@ public class Gamling : MonoBehaviour
     [SerializeField] private SpriteRenderer slot1;
     [SerializeField] private SpriteRenderer slot2;
     [SerializeField] private SpriteRenderer slot3;
-
     [SerializeField] private List<Sprite> jackpotIcons;
+    [SerializeField] private TextMeshProUGUI text;
     private Symbol winningSymbol;
     private List<Symbol> reverseList;
 
@@ -18,6 +19,7 @@ public class Gamling : MonoBehaviour
     {
         reverseList = new List<Symbol>(symbols.symbols);
         reverseList.Reverse();
+        text.text = "0";
     }
 
     public bool BigPot()
@@ -25,7 +27,7 @@ public class Gamling : MonoBehaviour
         float number = Random.value;
         foreach (Symbol symbol in reverseList)
         {
-            if (number < 1.0f / symbol.odds)
+            if (number <= 1.0f / symbol.odds)
             {
                 winningSymbol = symbol;
                 return true;
@@ -39,7 +41,7 @@ public class Gamling : MonoBehaviour
         float number = Random.value;
         foreach (Symbol symbol in reverseList)
         {
-            if (number < 1.0f / symbol.odds * smallPotOdds)
+            if (number <= 1.0f / symbol.odds * smallPotOdds)
             {
                 winningSymbol = symbol;
                 return true;
@@ -64,7 +66,7 @@ public class Gamling : MonoBehaviour
                 slot2.sprite = jackpotIcons[1];
                 slot3.sprite = jackpotIcons[2];
             }
-            Debug.Log("You won the big pot! " + winningSymbol.odds + " coins!");
+            text.text = winningSymbol.bigWin.ToString();
         }
         else if (SmallPot())
         {
@@ -80,7 +82,7 @@ public class Gamling : MonoBehaviour
                 slot2.sprite = jackpotIcons[1];
                 slot3.sprite = reverseList[Random.Range(0, reverseList.Count)].symbolIcon;
             }
-            Debug.Log("You won the small pot! " + winningSymbol.odds + " coins!");
+            text.text = winningSymbol.smallWin.ToString();
         }
         else
         {
@@ -117,7 +119,7 @@ public class Gamling : MonoBehaviour
             {
                 slot3.sprite = randomList[2].symbolIcon;
             }
-            Debug.Log("You lost!");
+            text.text = "0";
         }
     }
 
