@@ -17,6 +17,7 @@ public class Gamling : MonoBehaviour
     private List<Symbol> reverseList;
 
     [SerializeField] private List<Animator> animations;
+    private bool rolling = false;
 
     void Start()
     {
@@ -73,20 +74,28 @@ public class Gamling : MonoBehaviour
             yield return new WaitForSeconds(0.2f);
         }
         text.text = winning.ToString();
+        rolling = false;
     }
 
     public IEnumerator Roll()
     {
-        // Resets the slots to the default state
+        // Laver de sidste 3 symboler usynlige ved at fjerne deres sprites
         slot1.sprite = null;
         slot2.sprite = null;
         slot3.sprite = null;
+
+        // for hver animation i animations listen, sætter vi deres speed til 1 og gør dem synlige
         foreach (Animator animator in animations)
         {
             animator.speed = 1;
             animator.GetComponent<SpriteRenderer>().enabled = true;
         }
+
+        // venter 3 sekunder
         yield return new WaitForSeconds(3);
+
+        // Roller maskinen først med BigPot, hvis den ikke rammer noget så roller den smallPot, hvis den ikke rammer noget så roller den random
+        // Derefter sætter den de 3 symboler i maskinen og viser dem og beløbet man har vundet
         if (BigPot())
         {
             if (!winningSymbol.isJackpot)
@@ -121,6 +130,7 @@ public class Gamling : MonoBehaviour
         }
         else
         {
+            // En lille funktion der vælger 3 forskellige symboler der ikke kan være de samme, så man ikke vinder noget
             var randomList = new List<Symbol>();
             while (randomList.Count < 3)
             {
@@ -149,8 +159,9 @@ public class Gamling : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetAxis("Jump") > 0 && !rolling)
         {
+            rolling = true;
             StartCoroutine(Roll());
         }
     }
