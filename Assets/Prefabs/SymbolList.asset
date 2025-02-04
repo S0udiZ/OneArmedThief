@@ -15,141 +15,141 @@ MonoBehaviour:
   symbols:
   - symbolIcon: {fileID: 1519978744, guid: 9d7d44922bd58aa4582a9ad2f2e27398, type: 3}
     odds: 50
-    bigWin: 0
-    smallWin: 0
+    bigWin: 500
+    smallWin: 75
     extraSpins: 0
     extraSpinsAmount: 0
     isJackpot: 0
   - symbolIcon: {fileID: -775119842, guid: 9d7d44922bd58aa4582a9ad2f2e27398, type: 3}
     odds: 75
-    bigWin: 0
-    smallWin: 0
+    bigWin: 600
+    smallWin: 100
     extraSpins: 0
     extraSpinsAmount: 0
     isJackpot: 0
   - symbolIcon: {fileID: 807646738, guid: 9d7d44922bd58aa4582a9ad2f2e27398, type: 3}
     odds: 100
-    bigWin: 0
-    smallWin: 0
+    bigWin: 800
+    smallWin: 150
     extraSpins: 0
     extraSpinsAmount: 0
     isJackpot: 0
   - symbolIcon: {fileID: -249511026, guid: 9d7d44922bd58aa4582a9ad2f2e27398, type: 3}
     odds: 150
-    bigWin: 0
-    smallWin: 0
+    bigWin: 900
+    smallWin: 200
     extraSpins: 0
     extraSpinsAmount: 0
     isJackpot: 0
   - symbolIcon: {fileID: -20339205, guid: 9d7d44922bd58aa4582a9ad2f2e27398, type: 3}
     odds: 200
-    bigWin: 0
-    smallWin: 0
+    bigWin: 1000
+    smallWin: 300
     extraSpins: 0
     extraSpinsAmount: 0
     isJackpot: 0
   - symbolIcon: {fileID: -544737903, guid: 9d7d44922bd58aa4582a9ad2f2e27398, type: 3}
     odds: 300
-    bigWin: 0
-    smallWin: 0
+    bigWin: 1500
+    smallWin: 400
     extraSpins: 0
     extraSpinsAmount: 0
     isJackpot: 0
   - symbolIcon: {fileID: -353189640, guid: 9d7d44922bd58aa4582a9ad2f2e27398, type: 3}
     odds: 350
-    bigWin: 0
-    smallWin: 0
+    bigWin: 2000
+    smallWin: 450
     extraSpins: 0
     extraSpinsAmount: 0
     isJackpot: 0
   - symbolIcon: {fileID: -602418156, guid: 9d7d44922bd58aa4582a9ad2f2e27398, type: 3}
     odds: 400
-    bigWin: 0
-    smallWin: 0
+    bigWin: 2500
+    smallWin: 500
     extraSpins: 0
     extraSpinsAmount: 0
     isJackpot: 0
   - symbolIcon: {fileID: -809534408, guid: 9d7d44922bd58aa4582a9ad2f2e27398, type: 3}
     odds: 450
-    bigWin: 0
-    smallWin: 0
+    bigWin: 3000
+    smallWin: 600
     extraSpins: 0
     extraSpinsAmount: 0
     isJackpot: 0
   - symbolIcon: {fileID: 892589055, guid: 9d7d44922bd58aa4582a9ad2f2e27398, type: 3}
     odds: 500
-    bigWin: 0
-    smallWin: 0
+    bigWin: 4000
+    smallWin: 700
     extraSpins: 0
     extraSpinsAmount: 0
     isJackpot: 0
   - symbolIcon: {fileID: -1780794358, guid: 9d7d44922bd58aa4582a9ad2f2e27398, type: 3}
     odds: 600
-    bigWin: 0
-    smallWin: 0
+    bigWin: 8000
+    smallWin: 800
     extraSpins: 0
     extraSpinsAmount: 0
     isJackpot: 0
   - symbolIcon: {fileID: 545302617, guid: 9d7d44922bd58aa4582a9ad2f2e27398, type: 3}
     odds: 800
-    bigWin: 0
-    smallWin: 0
+    bigWin: 9000
+    smallWin: 1000
     extraSpins: 0
     extraSpinsAmount: 0
     isJackpot: 0
   - symbolIcon: {fileID: 695215019, guid: 9d7d44922bd58aa4582a9ad2f2e27398, type: 3}
     odds: 900
-    bigWin: 0
-    smallWin: 0
+    bigWin: 10000
+    smallWin: 1200
     extraSpins: 0
     extraSpinsAmount: 0
     isJackpot: 0
   - symbolIcon: {fileID: 2140833922, guid: 9d7d44922bd58aa4582a9ad2f2e27398, type: 3}
     odds: 1000
-    bigWin: 0
-    smallWin: 0
+    bigWin: 15000
+    smallWin: 1500
     extraSpins: 0
     extraSpinsAmount: 0
     isJackpot: 0
   - symbolIcon: {fileID: 950257097, guid: 9d7d44922bd58aa4582a9ad2f2e27398, type: 3}
     odds: 1500
-    bigWin: 0
-    smallWin: 0
+    bigWin: 20000
+    smallWin: 2000
     extraSpins: 0
     extraSpinsAmount: 0
     isJackpot: 0
   - symbolIcon: {fileID: 181301436, guid: 9d7d44922bd58aa4582a9ad2f2e27398, type: 3}
     odds: 2000
-    bigWin: 0
-    smallWin: 0
+    bigWin: 25000
+    smallWin: 2500
     extraSpins: 0
     extraSpinsAmount: 0
     isJackpot: 0
   - symbolIcon: {fileID: 1666303214, guid: 9d7d44922bd58aa4582a9ad2f2e27398, type: 3}
     odds: 2500
-    bigWin: 0
-    smallWin: 0
+    bigWin: 30000
+    smallWin: 3000
     extraSpins: 0
     extraSpinsAmount: 0
     isJackpot: 0
   - symbolIcon: {fileID: 462554774, guid: 9d7d44922bd58aa4582a9ad2f2e27398, type: 3}
     odds: 3000
-    bigWin: 0
-    smallWin: 0
+    bigWin: 40000
+    smallWin: 4000
     extraSpins: 0
     extraSpinsAmount: 0
     isJackpot: 0
   - symbolIcon: {fileID: -278201975, guid: 9d7d44922bd58aa4582a9ad2f2e27398, type: 3}
     odds: 4000
-    bigWin: 0
-    smallWin: 0
+    bigWin: 50000
+    smallWin: 5000
     extraSpins: 0
     extraSpinsAmount: 0
     isJackpot: 0
   - symbolIcon: {fileID: 1277127353, guid: 9d7d44922bd58aa4582a9ad2f2e27398, type: 3}
     odds: 8000
-    bigWin: 0
-    smallWin: 0
+    bigWin: 100000
+    smallWin: 10000
     extraSpins: 0
     extraSpinsAmount: 0
     isJackpot: 1
