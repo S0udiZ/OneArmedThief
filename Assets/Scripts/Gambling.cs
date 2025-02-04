@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using TMPro;
 using UnityEngine;
 
@@ -15,11 +16,18 @@ public class Gamling : MonoBehaviour
     private Symbol winningSymbol;
     private List<Symbol> reverseList;
 
+    [SerializeField] private List<Animator> animations;
+
     void Start()
     {
         reverseList = new List<Symbol>(symbols.symbols);
         reverseList.Reverse();
         text.text = "0";
+        foreach (Animator animator in animations)
+        {
+            animator.speed = 0;
+            animator.GetComponent<SpriteRenderer>().enabled = false;
+        }
     }
 
     public bool BigPot()
@@ -50,39 +58,66 @@ public class Gamling : MonoBehaviour
         return false;
     }
 
-    public void Roll()
+    public IEnumerator SetRolls(Sprite sprite1, Sprite sprite2, Sprite sprite3, int winning)
     {
+        var spriteSetList = new List<SpriteRenderer> { slot1, slot2, slot3 };
+        var spriteList = new List<Sprite> { sprite1, sprite2, sprite3 };
+
+        foreach (SpriteRenderer sprite in spriteSetList)
+        {
+            var index = spriteSetList.IndexOf(sprite);
+            var animation = animations[index];
+            animation.speed = 0;
+            animation.GetComponent<SpriteRenderer>().enabled = false;
+            sprite.sprite = spriteList[index];
+            yield return new WaitForSeconds(0.2f);
+        }
+        text.text = winning.ToString();
+    }
+
+    public IEnumerator Roll()
+    {
+        // Resets the slots to the default state
+        slot1.sprite = null;
+        slot2.sprite = null;
+        slot3.sprite = null;
+        foreach (Animator animator in animations)
+        {
+            animator.speed = 1;
+            animator.GetComponent<SpriteRenderer>().enabled = true;
+        }
+        yield return new WaitForSeconds(3);
         if (BigPot())
         {
             if (!winningSymbol.isJackpot)
             {
-                slot1.sprite = winningSymbol.symbolIcon;
-                slot2.sprite = winningSymbol.symbolIcon;
-                slot3.sprite = winningSymbol.symbolIcon;
+                StartCoroutine(SetRolls(winningSymbol.symbolIcon, winningSymbol.symbolIcon, winningSymbol.symbolIcon, winningSymbol.bigWin));
             }
             else
             {
-                slot1.sprite = jackpotIcons[0];
-                slot2.sprite = jackpotIcons[1];
-                slot3.sprite = jackpotIcons[2];
+                StartCoroutine(SetRolls(jackpotIcons[0], jackpotIcons[1], jackpotIcons[2], winningSymbol.bigWin));
             }
-            text.text = winningSymbol.bigWin.ToString();
         }
         else if (SmallPot())
         {
             if (!winningSymbol.isJackpot)
             {
-                slot1.sprite = winningSymbol.symbolIcon;
-                slot2.sprite = winningSymbol.symbolIcon;
-                slot3.sprite = reverseList[Random.Range(0, reverseList.Count)].symbolIcon;
+                var randomSprite = winningSymbol.symbolIcon;
+                while (randomSprite == winningSymbol.symbolIcon)
+                {
+                    randomSprite = reverseList[Random.Range(0, reverseList.Count)].symbolIcon;
+                }
+                StartCoroutine(SetRolls(winningSymbol.symbolIcon, winningSymbol.symbolIcon, randomSprite, winningSymbol.smallWin));
             }
             else
             {
-                slot1.sprite = jackpotIcons[0];
-                slot2.sprite = jackpotIcons[1];
-                slot3.sprite = reverseList[Random.Range(0, reverseList.Count)].symbolIcon;
+                var randomSprite = winningSymbol.symbolIcon;
+                while (randomSprite == winningSymbol.symbolIcon)
+                {
+                    randomSprite = reverseList[Random.Range(0, reverseList.Count)].symbolIcon;
+                }
+                StartCoroutine(SetRolls(jackpotIcons[0], jackpotIcons[1], randomSprite, winningSymbol.smallWin));
             }
-            text.text = winningSymbol.smallWin.ToString();
         }
         else
         {
@@ -95,31 +130,20 @@ public class Gamling : MonoBehaviour
                     randomList.Add(randomSymbol);
                 }
             }
-            if (randomList[0].isJackpot)
+            var correctSymbolList = new List<Sprite>();
+            foreach (Symbol symbol in randomList)
             {
-                slot1.sprite = jackpotIcons[0];
+                if (!symbol.isJackpot)
+                {
+                    correctSymbolList.Add(symbol.symbolIcon);
+                }
+                else
+                {
+                    var index = randomList.IndexOf(symbol);
+                    correctSymbolList.Add(jackpotIcons[index]);
+                }
             }
-            else
-            {
-                slot1.sprite = randomList[0].symbolIcon;
-            }
-            if (randomList[1].isJackpot)
-            {
-                slot2.sprite = jackpotIcons[1];
-            }
-            else
-            {
-                slot2.sprite = randomList[1].symbolIcon;
-            }
-            if (randomList[2].isJackpot)
-            {
-                slot3.sprite = jackpotIcons[2];
-            }
-            else
-            {
-                slot3.sprite = randomList[2].symbolIcon;
-            }
-            text.text = "0";
+            StartCoroutine(SetRolls(correctSymbolList[0], correctSymbolList[1], correctSymbolList[2], 0));
         }
     }
 
@@ -127,7 +151,7 @@ public class Gamling : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Roll();
+            StartCoroutine(Roll());
         }
     }
 }
